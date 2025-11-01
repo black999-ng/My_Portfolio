@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
     // Type one name then delete it (full typing + full erase effect)
-    async function typeName(name, charDelay = 35, hold = 900, deleteDelay = 28, postDeletePause = 250){
+    async function typeName(name, charDelay =50, hold = 5000, deleteDelay = 100, postDeletePause = 250){
       // compute fit based on full name
       fitFontSizeToWidth(typedName, name, { maxSize: 42, minSize: 14 });
 

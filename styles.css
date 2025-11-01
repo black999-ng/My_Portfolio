@@ -117,10 +117,12 @@ body {
 }
 
 .hero {
-  padding: calc(var(--header-height) + 2rem) 0 2.5rem;
-  min-height: 100vh;
+  padding: calc(var(--header-height) + 1rem) 0 0.5rem;
+  height: calc(100vh - var(--header-height));
+  min-height: unset;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .hero-inner {
   display: grid;
@@ -195,6 +197,10 @@ body {
     width: 100%;
     text-align: center;
     white-space: normal;
+    min-height: 2.2rem;
+    height: 52px;
+    display: inline-block;
+    overflow: hidden;
   }
   .typed-name {
     white-space: normal;
@@ -216,21 +222,101 @@ body {
 
 /* ensure responsive sizing for smaller screens */
 @media (max-width:700px){
-  .typed-name{ font-size:1.8rem }
+  .typed-name{ font-size:1.6rem }
+  
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-card {
+    order: -1;
+    margin-bottom: 0.5rem;
+    display: block;
+    width: 100%;
+    max-width: 220px;
+  }
+  
+  .card-inner {
+    max-width: 180px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .profile-circle {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    display: block;
+    position: relative;
+  }
+  
+  .profile-circle img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .profile-circle {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+  
+  .hero-text {
+    margin-top: 0.5rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .lead {
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+  
+  .social-links {
+    margin-top: 0.5rem;
+    gap: 8px;
+  }
+  
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .lead{color:var(--muted);max-width:65ch;text-align:left;hyphens:auto}
 
 /* About section styling */
+
+
+
 .about-content {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   margin-top: 1rem;
+  max-width: var(--max-width);
+  margin: 1rem auto 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-text {
-  max-width: 850px;
+  max-width: none;
 }
 
 .personal-info {
@@ -238,14 +324,20 @@ body {
   border-radius: var(--radius);
   padding: 2rem;
   border: 1px solid rgba(255,255,255,0.03);
-  max-width: 850px;
+  height: fit-content;
+  align-self: start;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin-left: 0;
 }
 
 .info-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 6rem;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .info-row:last-child {
@@ -274,13 +366,23 @@ body {
 
 /* Mobile adjustments for about section */
 @media (max-width: 900px) {
-  .about-grid {
-    grid-template-columns: 1fr;
+  .about-content {
+    flex-direction: column;
     gap: 2rem;
+    padding: 0 1rem;
+    width: auto;
   }
-  
+  .personal-info {
+    max-width: 850px;
+    width: 100%;
+    order: 2;
+  }
   .info-row {
     gap: 1rem;
+    width: 100%;
+  }
+  .about-text {
+    order: 1;
   }
 }
 
@@ -379,6 +481,17 @@ body {
   background: var(--bg);
   box-shadow: 0 18px 60px rgba(0,0,0,0.6);
   transition: box-shadow 300ms ease, transform 300ms ease;
+  display: block;
+}
+
+.profile-circle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* radiant glow behind the profile avatar */
@@ -504,6 +617,40 @@ body {
 
 .site-footer{padding:2rem 0;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.02)}
 
+/* Subtle reveal/fade-in animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(.2,.9,.2,1), transform 0.7s cubic-bezier(.2,.9,.2,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Animate hero image and text separately for extra polish */
+.hero-card.reveal {
+  transition-delay: 0.1s;
+}
+.hero-text.reveal {
+  transition-delay: 0.2s;
+}
+
+/* Animate about and other sections */
+.section.reveal {
+  transition-delay: 0.15s;
+}
+
+/* Animate project cards */
+.project.reveal {
+  transition-delay: 0.2s;
+}
+
+/* Animate skill categories */
+.skill-category.reveal {
+  transition-delay: 0.2s;
+}
+
 /* Reveal animations utility */
 .reveal{opacity:0;transform:translateY(12px);transition:opacity 560ms cubic-bezier(.2,.9,.2,1), transform 560ms cubic-bezier(.2,.9,.2,1)}
 .reveal.is-visible{opacity:1;transform:none}
@@ -529,17 +676,47 @@ html{font-size:calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));}
   }
   
   .hero {
-    padding-top: calc(var(--header-height) + 1rem);
+    padding: calc(var(--header-height) + 1rem) 0 0.5rem;
+    height: calc(100vh - var(--header-height));
+    min-height: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+  }
+
+  .hero-card {
+    margin-bottom: 0.5rem;
+    display: block;
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .card-inner {
+    max-width: 180px;
+    margin: 0 auto;
+    display: block;
+  }
+
   .project-grid{grid-template-columns:1fr}
   .contact-form{grid-template-columns:1fr}
   .container{padding:1rem}
-  .hero{text-align: center}
+
   .hero-text h1{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
   }
   .typed-wrapper {
     max-width: 100%;
@@ -555,10 +732,23 @@ html{font-size:calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));}
   .card-inner{max-width:220px}
   .section h2{font-size:1.5rem;margin-bottom:1.25rem}
   
-  /* Center social links in mobile view */
+  /* Compress social links in mobile view */
   .social-links {
     justify-content: center;
     width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+  .icon-btn svg,
+  .icon-btn img {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -659,7 +849,7 @@ button, .nav a, .btn{touch-action:manipulation}
   height: 100%;
   pointer-events: none;
   display: block;
-  opacity: 0.85; /* Increased opacity for better visibility */
+  opacity: 0.95; /* Increased opacity for better visibility */
   mix-blend-mode: color-dodge;
   transform: scale(1.15); /* Larger scale for better edge coverage */
   filter: saturate(1.2) brightness(1.1); /* Enhanced visibility */
