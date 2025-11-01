@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Developer Portfolio — Blaxk</title>
+  <meta name="description" content="Portfolio of a young developer showcasing projects, skills, and contact info." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- Fixed background wrapper -->
+  <div class="page-background">
+    <canvas id="circuit-bg" class="circuit-bg" aria-hidden="true"></canvas>
+  </div>
+  
+  <!-- Scrollable content wrapper -->
+  <div class="page-content">
+    <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Black999-ng<span class="dot">.</span></div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+  <section class="hero reveal">
+      <div class="container hero-inner">
+  <div class="hero-text reveal">
+          <h1>Hi, I'm 
+            <div class="typed-container">
+              <span class="typed-wrapper" aria-live="polite" aria-atomic="true">
+                <span id="typed-name" class="typed-name" aria-hidden="false"></span>
+                <span class="typed-cursor" aria-hidden="true">|</span>
+              </span>
+            </div>
+          </h1>
+          <p class="lead">A junior developer who builds clean, accessible, and fast web app for good user experiences. I love JavaScript, design systems, and learning new things.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn primary">See Work</a>
+            <a href="#contact" class="btn outline">Let's Talk</a>
+          </div>
+          <!-- Social links with icons from assets -->
+          <div class="social-links" aria-label="social links">
+            <a href="#" class="icon-btn" aria-label="LinkedIn">
+              <img src="assets/icons/Logos/linkedin-fill.svg" alt="" aria-hidden="true" />
+            </a>
+
+            <a href="https://github.com/black999-ng" class="icon-btn" aria-label="GitHub">
+              <img src="assets/icons/Logos/github-fill.svg" alt="" aria-hidden="true" />
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=100078286630796&mibextid=rS40aB7S9Ucbxw6v" class="icon-btn" aria-label="Twitter">
+              <img src="assets/icons/Logos/facebook-fill.svg" alt="" aria-hidden="true" />
+            </a>
+
+            <a href="https://www.instagram.com/eboh_999/" class="icon-btn" aria-label="Instagram">
+              <img src="assets/icons/Logos/instagram-fill.svg" alt="" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+  <div class="hero-card reveal">
+          <div class="card-inner">
+            <div class="profile-circle">
+              <img src="assets/me.png" alt="Profile illustration" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section id="about" class="section reveal">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text reveal">
+            <p>I'm a curious and hands-on creator who loves bringing ideas to life through code, automation, and design. I explore how things work, then push them a little further — whether it's building smart bots, developing Python-powered systems, or crafting AI-driven experiences that feel human.</p>
+            <br>
+            <p>My work often blends technology and creativity: from automation projects that simplify workflows to interactive concepts like Midas Touch and Shape Ninja that turn imagination into motion. I believe innovation happens where logic meets creativity, and that's the space I love to build in.</p>
+          </div>
+          
+          <div class="personal-info reveal">
+            <div class="info-row">
+              <div class="info-group">
+                <h3>Name:</h3>
+                <p>Francis John Eboh</p>
+              </div>
+              <div class="info-group">
+                <h3>Experience:</h3>
+                <p>3 Years</p>
+              </div>
+            </div>
+            
+            <div class="info-row">
+              <div class="info-group">
+                <h3>Phone:</h3>
+                <p>+234 9131294991</p>
+              </div>
+              <div class="info-group">
+                <h3>Address:</h3>
+                <p>Kaduna, Nigeria</p>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-group">
+                <h3>Email:</h3>
+                <p>francisebohjohn@gmail.com</p>
+              </div>
+              <div class="info-group">
+                <h3>Freelance:</h3>
+                <p>Available</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section id="projects" class="section projects reveal">
+      <div class="container">
+        <h2>Selected Projects</h2>
+        <div class="project-grid">
+          <article class="project reveal">
+            <div class="project-media">Hand Recognizer</div>
+            <h3>Project One</h3>
+            <p>One of my many fun projects that utilizes the camera to interprete hand signs</p>
+            <div class="project-links"><a href="#">Live</a> · <a href="#">Code</a></div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-media">Trading bot</div>
+            <h3>Project Two</h3>
+            <p>Though incomplete, this proecy is supposed to utilize use of Machine Learning to develope a solid strategy to trade the markets</p>
+            <div class="project-links"><a href="#">Live</a> · <a href="#">Code</a></div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-media">Church Programme Site</div>
+            <h3>Project Three</h3>
+            <p>This is a web app using Python, HTML and CSS used to display events with an amazing interface as they come up</p>
+            <div class="project-links"><a href="#">Live</a> · <a href="#">Code</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  <section id="skills" class="section reveal">
+      <div class="container">
+        <h2>⚙️ Tech Stack</h2>
+        <div class="skills-grid">
+          <!-- Languages -->
+          <div class="skill-category reveal">
+            <div class="skill-header">
+              <span class="skill-icon">💡</span>
+              <h3>Languages</h3>
+            </div>
+            <ul class="skill-list">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+
+          <!-- Frameworks & Libraries -->
+          <div class="skill-category reveal">
+            <div class="skill-header">
+              <span class="skill-icon">🧠</span>
+              <h3>Frameworks & Libraries</h3>
+            </div>
+            <ul class="skill-list">
+              <li>Node.js</li>
+              <li>Web3.js</li>
+              <li>OpenCV</li>
+              <li>MediaPipe</li>
+            </ul>
+          </div>
+
+          <!-- Automation & AI -->
+          <div class="skill-category reveal">
+            <div class="skill-header">
+              <span class="skill-icon">🤖</span>
+              <h3>Automation & AI Tools</h3>
+            </div>
+            <ul class="skill-list">
+              <li>Python Automation Scripts</li>
+              <li>Automatic Bot Systems</li>
+              <li>AI Voice & Editing Tools</li>
+            </ul>
+          </div>
+
+          <!-- Data & Visualization -->
+          <div class="skill-category reveal">
+            <div class="skill-header">
+              <span class="skill-icon">📊</span>
+              <h3>Data & Visualization</h3>
+            </div>
+            <ul class="skill-list">
+              <li>Excel Dashboards</li>
+              <li>Data Validation & Parsing</li>
+              <li>Dynamic Charts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section id="contact" class="section contact reveal">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Interested in working together? Send a message.</p>
+        <form id="contact-form" class="contact-form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn primary">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Blaxk — Built with ❤️</small>
+    </div>
+  </footer>
+
+  <!-- Notification element -->
+  <div class="notification" role="alert">
+    <span class="icon"></span>
+    <span class="message"></span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
