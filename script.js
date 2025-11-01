@@ -74,17 +74,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
       try {
         // Get form data
         const formData = {
-          from_name: form.name.value,
-          reply_to: form.email.value,
-          message: form.message.value,
-          to_name: 'Francis', // Add recipient name for template
+          name: form.name.value,          // Template variable {{name}}
+          email: form.email.value,        // Template variable {{email}}
+          message: form.message.value,    // Will be used in content
+          reply_to: form.email.value      // For reply functionality
         };
 
         // Send email using EmailJS and wait for response
         const response = await emailjs.send(
-          "service_7focmrx",
-          "template_ijcx1qz", 
-          formData
+          "service_7focmrx",     // Your verified Gmail service
+          "template_ijcx1qz",    // Your "Auto-Reply" template
+          formData,              // Form data matching template variables
+          "Ss_SM2CajVCHM510b"   // Your public key
         );
         
         if (response.status === 200) {

@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Create .vscode directory",
+			"type": "shell",
+			"command": "mkdir -p c:\\Users\\JOHN EBOH\\Downloads\\scripts\\Portfolio\\.vscode",
+			"isBackground": false,
+			"group": "none"
+		}
+	]
+}
