@@ -46,7 +46,7 @@
               </span>
             </div>
           </h1>
-          <p class="lead">A junior developer who builds clean, accessible, and fast web app for good user experiences. I love JavaScript, design systems, and learning new things.</p>
+          <p class="lead">A Developer who builds clean, accessible, and fast web apps for good user experiences. I love JavaScript, design systems, and learning new things.</p>
           <div class="hero-cta">
             <a href="#projects" class="btn primary">See Work</a>
             <a href="#contact" class="btn outline">Let's Talk</a>
@@ -61,7 +61,7 @@
               <img src="assets/icons/Logos/github-fill.svg" alt="" aria-hidden="true" />
             </a>
 
-            <a href="https://www.facebook.com/profile.php?id=100078286630796&mibextid=rS40aB7S9Ucbxw6v" class="icon-btn" aria-label="Twitter">
+            <a href="https://www.facebook.com/profile.php?id=100078286630796&mibextid=rS40aB7S9Ucbxw6v" class="icon-btn" aria-label="Facebook">
               <img src="assets/icons/Logos/facebook-fill.svg" alt="" aria-hidden="true" />
             </a>
 
@@ -108,7 +108,7 @@
                 <p>+234 9131294991</p>
               </div>
               <div class="info-group">
-                <h3>Address:</h3>
+                <h3>Location:</h3>
                 <p>Kaduna, Nigeria</p>
               </div>
             </div>
@@ -132,26 +132,49 @@
       <div class="container">
         <h2>Selected Projects</h2>
         <div class="project-grid">
+          
+          <!-- Project 1 -->
           <article class="project reveal">
-            <div class="project-media">Hand Recognizer</div>
-            <h3>Project One</h3>
-            <p>One of my many fun projects that utilizes the camera to interprete hand signs</p>
-            <div class="project-links"><a href="#">Live</a> · <a href="#">Code</a></div>
+            <div class="project-header">
+              <div class="project-icon">🖐️</div>
+              <h3>Hand Recognizer</h3>
+            </div>
+            <p>An interactive computer vision project that utilizes the camera to interpret hand signs and gestures in real-time, translating movement into digital inputs.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">MediaPipe</span>
+            </div>
           </article>
 
+          <!-- Project 2 -->
           <article class="project reveal">
-            <div class="project-media">Trading bot</div>
-            <h3>Project Two</h3>
-            <p>Though incomplete, this proecy is supposed to utilize use of Machine Learning to develope a solid strategy to trade the markets</p>
-            <div class="project-links"><a href="#">Live</a> · <a href="#">Code</a></div>
+            <div class="project-header">
+              <div class="project-icon">📈</div>
+              <h3>Trading Bot</h3>
+            </div>
+            <p>An automated financial system designed to utilize Machine Learning algorithms to analyze market trends and develop solid trading strategies.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Automation</span>
+            </div>
           </article>
 
+          <!-- Project 3 -->
           <article class="project reveal">
-            <div class="project-media">Church Programme Site</div>
-            <h3>Project Three</h3>
-            <p>This is a web app using Python, HTML and CSS used to display events with an amazing interface as they come up</p>
-            <div class="project-links"><a href="#">Live</a> · <a href="#">Code</a></div>
+            <div class="project-header">
+              <div class="project-icon">📅</div>
+              <h3>Church Event System</h3>
+            </div>
+            <p>A full-stack web application for managing church programmes. Features a dynamic frontend for displaying upcoming events with a modern interface.</p>
+            <div class="project-tags">
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Python</span>
+              <span class="tag">Web App</span>
+            </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -168,9 +191,9 @@
             </div>
             <ul class="skill-list">
               <li>Python</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
+              <li>JavaScript (ES6+)</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
             </ul>
           </div>
 
@@ -181,10 +204,10 @@
               <h3>Frameworks & Libraries</h3>
             </div>
             <ul class="skill-list">
+              <li>React</li>
               <li>Node.js</li>
               <li>Web3.js</li>
               <li>OpenCV</li>
-              <li>MediaPipe</li>
             </ul>
           </div>
 
@@ -192,12 +215,12 @@
           <div class="skill-category reveal">
             <div class="skill-header">
               <span class="skill-icon">🤖</span>
-              <h3>Automation & AI Tools</h3>
+              <h3>Automation & AI</h3>
             </div>
             <ul class="skill-list">
-              <li>Python Automation Scripts</li>
-              <li>Automatic Bot Systems</li>
-              <li>AI Voice & Editing Tools</li>
+              <li>Python Scripting</li>
+              <li>Bot Development</li>
+              <li>MediaPipe</li>
             </ul>
           </div>
 
@@ -205,12 +228,12 @@
           <div class="skill-category reveal">
             <div class="skill-header">
               <span class="skill-icon">📊</span>
-              <h3>Data & Visualization</h3>
+              <h3>Data Tools</h3>
             </div>
             <ul class="skill-list">
               <li>Excel Dashboards</li>
-              <li>Data Validation & Parsing</li>
-              <li>Dynamic Charts</li>
+              <li>Data Parsing</li>
+              <li>Visualization</li>
             </ul>
           </div>
         </div>
@@ -223,15 +246,15 @@
         <p>Interested in working together? Send a message.</p>
         <form id="contact-form" class="contact-form">
           <label for="name">Name</label>
-          <input id="name" name="name" type="text" required />
+          <input id="name" name="name" type="text" placeholder="Your Name" required />
 
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
+          <input id="email" name="email" type="email" placeholder="your@email.com" required />
 
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
 
-          <button type="submit" class="btn primary">Send</button>
+          <button type="submit" class="btn primary">Send Message</button>
         </form>
       </div>
     </section>
